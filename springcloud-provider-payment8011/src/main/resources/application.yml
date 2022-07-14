@@ -8,7 +8,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://:3310/cloud2021?characterEncoding=utf8&useSSL=false
     username: root
-    password:
+    password: 
     type: com.alibaba.druid.pool.DruidDataSource
     #Druid 配置
     filters: stat
@@ -38,4 +38,8 @@ eureka:
     register-with-eureka: true
     fetchRegistry: true
     service-url:
-      defaultZone: http://localhost:7011/eureka
+      # defaultZone: http://localhost:7011/eureka
+      defaultZone: http://eureka7011.com:7011/eureka,http://eureka7012.com:7012/eureka
+  instance:
+    instance-id: payment8011
+    prefer-ip-address: true #访问路径可以显示IP地址
