@@ -9,8 +9,11 @@
     <module>springcloud-api-commons</module>
     <module>springcloud-generator</module>
     <module>springcloud-provider-payment8011</module>
-    <module>springcloud-consumer-order8012</module>
-      <module>springcloud-eureka-server7011</module>
+    <module>springcloud-consumer-order80</module>
+    <module>springcloud-eureka-server7011</module>
+    <module>springcloud-eureka-server7012</module>
+    <module>springcloud-provider-payment8012</module>
+      <module>springcloud-provider-payment8014</module>
   </modules>
 
   <packaging>pom</packaging>
