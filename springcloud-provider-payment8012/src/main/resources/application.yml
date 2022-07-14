@@ -1,14 +1,14 @@
 server:
-  port: 8011
+  port: 8012
 
 spring:
   application:
     name: springcloud-payment-service
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://120.79.7.36:3310/cloud2021?characterEncoding=utf8&useSSL=false
+    url: jdbc:mysql://:3310/cloud2021?characterEncoding=utf8&useSSL=false
     username: root
-    password: rzkruizhukai123.
+    password:
     type: com.alibaba.druid.pool.DruidDataSource
     #Druid 配置
     filters: stat
@@ -40,3 +40,6 @@ eureka:
     service-url:
       # defaultZone: http://localhost:7011/eureka
       defaultZone: http://eureka7011.com:7011/eureka,http://eureka7012.com:7012/eureka
+  instance:
+    instance-id: payment8012
+    prefer-ip-address: true #访问路径可以显示IP地址
