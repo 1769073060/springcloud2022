@@ -1,0 +1,26 @@
+server:
+  port: 80
+spring:
+  application:
+    name: springcloud-openfeign-order
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://eureka7011.com:7011/eureka,http://eureka7012.com:7012/eureka
+
+
+feign:
+  client:
+    config:
+      default:
+        # 值得是建立链接所用的时间，适用与网络状况下，两端连接所用的时间
+        ConnectTimeOut: 5000
+        # 指的是建立链接后从服务器读取可用资源所用的时间
+        ReadTimeout: 5000
+
+# 打印具体调用服务日志
+logging:
+  level:
+    com.rzk.springcloud.service.PaymentOpenFeignService: debug
