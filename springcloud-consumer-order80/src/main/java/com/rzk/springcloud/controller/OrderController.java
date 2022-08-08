@@ -26,6 +26,7 @@ public class OrderController {
 
     @GetMapping(value = "list")
     public CommonResult list(){
+        //restTemplate.getForEntity()
         return restTemplate.getForObject(PAYMENT_URL+"/rzk/springcloud/payment/list",CommonResult.class);
     }
 

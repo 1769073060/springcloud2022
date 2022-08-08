@@ -1,14 +1,17 @@
 package com.rzk.springcloud;
 
+import com.rzk.myrule.MyRule;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.netflix.ribbon.RibbonClient;
 
+@RibbonClient(name = "SPRINGCLOUD-PAYMENT-SERVICE",configuration = MyRule.class)
 @EnableEurekaClient
 @SpringBootApplication
-public class OrderMain8012 {
+public class OrderMain80 {
 
     public static void main(String[] args) {
-        SpringApplication.run(OrderMain8012.class,args);
+        SpringApplication.run(OrderMain80.class,args);
     }
 }
